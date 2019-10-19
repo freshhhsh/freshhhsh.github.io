@@ -1,7 +1,7 @@
 ---
 published: true
 title: 【Flask数据库】`Flask-SQLAlchemy`插件的使用
-category: flask_数据库
+category: flask_MySQL
 tags:
   - python
   - flask
@@ -9,14 +9,14 @@ tags:
 layout: post
 ---
 @[TOC](文章目录)
-###`Flask-SQLAlchemy`插件的功能为将创建引擎部分做成插件，供flask使用，以连接数据库。
-###1、用`db.Model`作为基类创建类表。
-###2、`Column\Integer\String\relationship`不再需要导入，用`db.Column`形式就可以。
-###3、在定义模型的时候。可以不写`__tablename__`，则`Flask-SQLAlchemy`会自动将表名设为类名的小写。驼峰命名的类则会转为小写后用下划线连接，如`UserModel`转为`user_model`。明言胜于暗语，此条功能不用为好！！！
-###4、如果只是查找一个表上的数据，可以通过`表名.query`方法查询。如
+### `Flask-SQLAlchemy`插件的功能为将创建引擎部分做成插件，供flask使用，以连接数据库。
+### 1、用`db.Model`作为基类创建类表。
+### 2、`Column\Integer\String\relationship`不再需要导入，用`db.Column`形式就可以。
+### 3、在定义模型的时候。可以不写`__tablename__`，则`Flask-SQLAlchemy`会自动将表名设为类名的小写。驼峰命名的类则会转为小写后用下划线连接，如`UserModel`转为`user_model`。明言胜于暗语，此条功能不用为好！！！
+### 4、如果只是查找一个表上的数据，可以通过`表名.query`方法查询。如
 `users = User.query.order_by(User.id.desc())all()`
 
-###安装：
+### 安装：
 `pip install flask-sqlalchemy`
 ```python-flask
 from flask import Flask

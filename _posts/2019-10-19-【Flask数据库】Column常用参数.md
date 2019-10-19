@@ -1,7 +1,7 @@
 ---
 published: true
 title: 【Flask数据库】Column常用参数
-category: flask_数据库
+category: flask_MySQL
 tags:
   - python
   - flask
@@ -9,7 +9,7 @@ tags:
 layout: post
 ---
 @[TOC](文章目录)
-#一、Column常用参数：
+# 一、Column常用参数：
 
 ```
 class Article(Base):
