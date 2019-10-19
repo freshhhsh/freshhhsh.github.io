@@ -4,9 +4,9 @@
 # ---------------------------------------------------------------
 
 # Site
-title: Couragelogos
+title: freshhhsh的博客
 subtitle:
-description: 新鲜的圣海博客
+description: 新鲜的圣海
 author: freshhhsh
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -86,7 +86,7 @@ keywords: "Jekyll, NexT"
 rss: false
 
 # Specify the date when the site was setup
-since: 2019/10/19
+since: 2019/10
 
 # icon between year and author @Footer
 authoricon: heart
@@ -218,7 +218,7 @@ social:
   #LinkLabel: Link
     GitHub: https://github.com/freshhhsh
     # School: http://www.scut.edu.cn/new
-    知乎: https://www.zhihu.com/people/我有三个肾
+    知乎: https://www.zhihu.com/people/f2ad6e7046af33e66da4078b65c2d7e3
 
 
 # Social Links Icons
