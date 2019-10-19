@@ -6,8 +6,8 @@
 # Site
 title: Couragelogos
 subtitle:
-description: wublub dubda
-author: Logos
+description: 新鲜的圣海博客
+author: freshhhsh
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
@@ -86,7 +86,7 @@ keywords: "Jekyll, NexT"
 rss: false
 
 # Specify the date when the site was setup
-since: 2018
+since: 2019/10/19
 
 # icon between year and author @Footer
 authoricon: heart
@@ -117,13 +117,13 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories/
   about: /about/
   archives: /archives/
-  #tags: /tags/
+  tags: /tags/
   #github: /github/
   #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  # commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -216,8 +216,9 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   #LinkLabel: Link
-    GitHub: https://github.com/Logos23333
-    School: http://www.scut.edu.cn/new
+    GitHub: https://github.com/freshhhsh
+    # School: http://www.scut.edu.cn/new
+    知乎: https://www.zhihu.com/people/我有三个肾
 
 
 # Social Links Icons
@@ -233,10 +234,11 @@ social_icons:
   Twitter: twitter
   Weibo: weibo
   School: university
+  知乎: zhihu
 
 
 # Sidebar Avatar
-in directory: 
+in directory:
 avatar: assets/portrait.jpg
 
 
