@@ -81,6 +81,8 @@ page_parameter: a name(string) of a GET parameter that holds a page index. Use i
 
 per_page_parameter: a name for per_page likes page_parameter. default is ‘per_page’.
 
+bs_version: the version of bootstrap's cssstyle
+
 inner_window: how many links arround current page
 
 outer_window: how many links near first/last link
@@ -127,7 +129,7 @@ def index():
     start = (page-1) * config.PER_PAGE
     end = start + config.PER_PAGE
     posts = PostModel.query.slice(start,end)
-    pagination = Pagination(page=page, total=users.count(), search=search,record_name='users',outer_window=0,inner_window=2,per_page=20)
+    pagination = Pagination(page=page, total=users.count(), search=search,record_name='users',outer_window=0,inner_window=2,per_page=20,bs_version=3)
     context = {
       "banners": banners,
       "boards": boards,
