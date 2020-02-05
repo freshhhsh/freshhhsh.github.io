@@ -117,8 +117,46 @@ format_total: number format total, like 1,234, default is False
 
 format_number: number format start and end, like 1,234, default is False
 
-
+## 项目示例
 如：
 ```python
-  pagination = Pagination(page=page, total=users.count(), search=search,record_name='users',inner_window=0,inner_window=2,per_page=20)
+@bp.route('/')
+def index():
+    PER_PAGE = 20
+    page = request.args.get(get_page_parameter(), type=int, default=1)
+    start = (page-1) * config.PER_PAGE
+    end = start + config.PER_PAGE
+    posts = PostModel.query.slice(start,end)
+    pagination = Pagination(page=page, total=users.count(), search=search,record_name='users',outer_window=0,inner_window=2,per_page=20)
+    context = {
+      "banners": banners,
+      "boards": boards,
+      "posts": posts,
+      "pagination": pagination
+    }
+    return render_template("front/front_index.html",**context)
+```
+
+```html
+<ul class="post-list-group">
+    {% for post in posts %}
+        <li class="post-info">
+            <div class="post-avatar">
+                <img src="{{ post.author.avatar or url_for('static',filename='front/imgs/default_avatar.jpg') }}" alt="">
+            </div>
+            <div class="post-info-group">
+                <p class="post-title"><a href="#">{{ post.title }}</a></p>
+                <p class="post-info">
+                    <span>作者：<a href="#">{{ post.author.username }}</a></span>
+                    <span>发布时间：{{ post.create_time }}</span>
+                    <span>评论：0</span>
+                    <span>点赞：0</span>
+                </p>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+<div style="text-align: center">
+    {{ pagination.links }}
+</div>
 ```
